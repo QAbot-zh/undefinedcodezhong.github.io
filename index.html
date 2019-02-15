@@ -122,7 +122,7 @@
 <li>Yolo v2 on Pascal VOC 2007: <a href="https://hsto.org/files/a24/21e/068/a2421e0689fb43f08584de9d44c2215f.jpg" target="_blank" rel="noopener">https://hsto.org/files/a24/21e/068/a2421e0689fb43f08584de9d44c2215f.jpg</a></li>
 <li>Yolo v2 on Pascal VOC 2012 (comp4): <a href="https://hsto.org/files/3a6/fdf/b53/3a6fdfb533f34cee9b52bdd9bb0b19d9.jpg" target="_blank" rel="noopener">https://hsto.org/files/3a6/fdf/b53/3a6fdfb533f34cee9b52bdd9bb0b19d9.jpg</a></li>
 </ul>
-<h1 id="“You-Only-Look-Once-Unified-Real-Time-Object-Detection-versions-2-amp-3-”"><a href="#“You-Only-Look-Once-Unified-Real-Time-Object-Detection-versions-2-amp-3-”" class="headerlink" title="“You Only Look Once: Unified, Real-Time Object Detection (versions 2 &amp; 3)”"></a>“You Only Look Once: Unified, Real-Time Object Detection (versions 2 &amp; 3)”</h1><p>A Yolo cross-platform Windows and Linux version (for object detection). Contributtors: <a href="https://github.com/AlexeyAB/darknet/graphs/contributors" target="_blank" rel="noopener">https://github.com/AlexeyAB/darknet/graphs/contributors</a></p>
+<h1 id="“You-Only-Look-Once-Unified-Real-Time-Object-Detection-versions-2-amp-3-”"><a href="#“You-Only-Look-Once-Unified-Real-Time-Object-Detection-versions-2-amp-3-”" class="headerlink" title="“You Only Look Once: Unified, Real-Time Object Detection (versions 2 &amp; 3)”"></a>“You Only Look Once: Unified, Real-Time Object Detection (versions 2 &amp; 3)”</h1><p>A Yolo cross-platform Windows and Linux version (for object detection). Contributtors: <a href="https://github.com/AlexeyAB/darknet/graphs/contributors" target="_blank" rel="noopener">https://github.com/AlexeyAB/darknet/graphs/contributors</a><br>作者的开源支持包括windows和linux版本</p>
 <p>This repository is forked from Linux-version: <a href="https://github.com/pjreddie/darknet" target="_blank" rel="noopener">https://github.com/pjreddie/darknet</a></p>
 <p>More details: <a href="http://pjreddie.com/darknet/yolo/" target="_blank" rel="noopener">http://pjreddie.com/darknet/yolo/</a></p>
 <p>This repository supports:</p>
@@ -143,7 +143,7 @@
 </li>
 <li><strong>GPU with CC &gt;= 3.0</strong>: <a href="https://en.wikipedia.org/wiki/CUDA#GPUs_supported" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/CUDA#GPUs_supported</a></li>
 </ul>
-<h5 id="Pre-trained-models"><a href="#Pre-trained-models" class="headerlink" title="Pre-trained models"></a>Pre-trained models</h5><p>There are weights-file for different cfg-files (smaller size -&gt; faster speed &amp; lower accuracy:</p>
+<h5 id="Pre-trained-models"><a href="#Pre-trained-models" class="headerlink" title="Pre-trained models"></a>Pre-trained models</h5><p>预训练模型下载网址：<br>There are weights-file for different cfg-files (smaller size -&gt; faster speed &amp; lower accuracy:</p>
 <ul>
 <li><code>yolov3-openimages.cfg</code> (247 MB COCO <strong>Yolo v3</strong>) - requires 4 GB GPU-RAM: <a href="https://pjreddie.com/media/files/yolov3-openimages.weights" target="_blank" rel="noopener">https://pjreddie.com/media/files/yolov3-openimages.weights</a></li>
 <li><code>yolov3-spp.cfg</code> (240 MB COCO <strong>Yolo v3</strong>) - requires 4 GB GPU-RAM: <a href="https://pjreddie.com/media/files/yolov3-spp.weights" target="_blank" rel="noopener">https://pjreddie.com/media/files/yolov3-spp.weights</a></li>
@@ -181,7 +181,8 @@
 </ul>
 <p>And added manual - <a href="#how-to-train-to-detect-your-custom-objects">How to train Yolo v3/v2 (to detect your custom objects)</a></p>
 <p>Also, you might be interested in using a simplified repository where is implemented INT8-quantization (+30% speedup and -1% mAP reduced): <a href="https://github.com/AlexeyAB/yolo2_light" target="_blank" rel="noopener">https://github.com/AlexeyAB/yolo2_light</a></p>
-<h3 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use:"></a>How to use:</h3><h5 id="How-to-use-on-the-command-line"><a href="#How-to-use-on-the-command-line" class="headerlink" title="How to use on the command line:"></a>How to use on the command line:</h5><p>On Linux use <code>./darknet</code> instead of <code>darknet.exe</code>, like this:<code>./darknet detector test ./cfg/coco.data ./cfg/yolov3.cfg ./yolov3.weights</code></p>
+<h3 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use:"></a>How to use:</h3><p>使用说明</p>
+<h5 id="How-to-use-on-the-command-line"><a href="#How-to-use-on-the-command-line" class="headerlink" title="How to use on the command line:"></a>How to use on the command line:</h5><p>On Linux use <code>./darknet</code> instead of <code>darknet.exe</code>, like this:<code>./darknet detector test ./cfg/coco.data ./cfg/yolov3.cfg ./yolov3.weights</code></p>
 <p>On Linux find executable file <code>./darknet</code> in the root directory, while on Windows find it in the directory <code>\build\darknet\x64</code> </p>
 <ul>
 <li>Yolo v3 COCO - <strong>image</strong>: <code>darknet.exe detector test cfg/coco.data cfg/yolov3.cfg yolov3.weights -i 0 -thresh 0.25</code></li>
@@ -329,7 +330,8 @@
 </ol>
 <p>Only for small datasets sometimes better to decrease learning rate, for 4 GPUs set <code>learning_rate = 0.00025</code> (i.e. learning_rate = 0.001 / GPUs). In this case also increase 4x times <code>burn_in =</code> and <code>max_batches =</code> in your cfg-file. I.e. use <code>burn_in = 4000</code> instead of <code>1000</code>.</p>
 <p><a href="https://groups.google.com/d/msg/darknet/NbJqonJBTSY/Te5PfIpuCAAJ" target="_blank" rel="noopener">https://groups.google.com/d/msg/darknet/NbJqonJBTSY/Te5PfIpuCAAJ</a></p>
-<h2 id="How-to-train-to-detect-your-custom-objects"><a href="#How-to-train-to-detect-your-custom-objects" class="headerlink" title="How to train (to detect your custom objects):"></a>How to train (to detect your custom objects):</h2><p>(to train old Yolo v2 <code>yolov2-voc.cfg</code>, <code>yolov2-tiny-voc.cfg</code>, <code>yolo-voc.cfg</code>, <code>yolo-voc.2.0.cfg</code>, … <a href="https://github.com/AlexeyAB/darknet/tree/47c7af1cea5bbdedf1184963355e6418cb8b1b4f#how-to-train-pascal-voc-data" target="_blank" rel="noopener">click by the link</a>)</p>
+<h2 id="How-to-train-to-detect-your-custom-objects"><a href="#How-to-train-to-detect-your-custom-objects" class="headerlink" title="How to train (to detect your custom objects):"></a>How to train (to detect your custom objects):</h2><p>训练自己的模型，需要根据类别数修改yolo层的卷积核数量，注意，yolov2和yolov3计方式不一样。</p>
+<p>(to train old Yolo v2 <code>yolov2-voc.cfg</code>, <code>yolov2-tiny-voc.cfg</code>, <code>yolo-voc.cfg</code>, <code>yolo-voc.2.0.cfg</code>, … <a href="https://github.com/AlexeyAB/darknet/tree/47c7af1cea5bbdedf1184963355e6418cb8b1b4f#how-to-train-pascal-voc-data" target="_blank" rel="noopener">click by the link</a>)</p>
 <p>Training Yolo v3:</p>
 <ol>
 <li><p>Create file <code>yolo-obj.cfg</code> with the same content as in <code>yolov3.cfg</code> (or copy <code>yolov3.cfg</code> to <code>yolo-obj.cfg)</code> and:</p>
