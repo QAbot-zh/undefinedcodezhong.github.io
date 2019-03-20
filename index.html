@@ -125,7 +125,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>[手贱一时爽，一直手贱一直爽]</p>
+        <p>[手贱一时爽，一直手贱一直爽]<br>[在一次编译ros包的时候报了一个“-lpthread not found”的错，几番搜索确定是cmake版本过高原因，于是开启了和cmake斗智斗勇的残忍局面。<strong>几次重装经历</strong>就不表了，下面简单记录最终的解决方案。]</p>
 <p>查询cmake版本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cmake --version</span><br></pre></td></tr></table></figure></p>
 <p>安装新版本，选择需要的版本的安装版进行下载，可以使用命令行wget下载，也可以到<a href="https://cmake.org/files/" target="_blank" rel="noopener">官网</a>下载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install build-essential </span><br><span class="line">$ wget http://www.cmake.org/files/v3.12/cmake-3.12.3.tar.gz</span><br><span class="line">$ tar xf cmake-3.12.3.tar.gz </span><br><span class="line">$ cd cmake-3.12.3 </span><br><span class="line">$ ./configure </span><br><span class="line">$ make </span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure></p>
 <p>编译完成后，再次查询cmake版本，如果是升级版本，则此时应该可以看到成功标志; 如果是需要降级版本，则还需要再手动配置环境变量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//修改环境变量</span><br><span class="line">$ echo &quot;export PATH=/home/youlo/tools/cmake-3.12.3/bin:PATH&quot; &gt;&gt; .zshrc</span><br><span class="line">$ source .zshrc</span><br><span class="line">$ cmake --version</span><br></pre></td></tr></table></figure></p>
@@ -136,7 +136,7 @@
       <a data-url="http://yoursite.com/2019/03/20/博文0003/" data-id="cjth7v5en0002aerhl28ceene" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cmake版本/">cmake版本</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cmake版本-lpthread/">cmake版本   -lpthread</a></li></ul>
 
     </footer>
   </div>
@@ -827,7 +827,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PPA-ubuntu软件源更新报错/">PPA   ubuntu软件源更新报错</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmake版本/">cmake版本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yolo-darknet/">yolo-darknet</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PPA-ubuntu软件源更新报错/">PPA   ubuntu软件源更新报错</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmake版本-lpthread/">cmake版本   -lpthread</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yolo-darknet/">yolo-darknet</a></li></ul>
     </div>
   </div>
 
@@ -837,7 +837,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/PPA-ubuntu软件源更新报错/" style="font-size: 10px;">PPA   ubuntu软件源更新报错</a> <a href="/tags/cmake版本/" style="font-size: 10px;">cmake版本</a> <a href="/tags/yolo-darknet/" style="font-size: 10px;">yolo-darknet</a>
+      <a href="/tags/PPA-ubuntu软件源更新报错/" style="font-size: 10px;">PPA   ubuntu软件源更新报错</a> <a href="/tags/cmake版本-lpthread/" style="font-size: 10px;">cmake版本   -lpthread</a> <a href="/tags/yolo-darknet/" style="font-size: 10px;">yolo-darknet</a>
     </div>
   </div>
 
